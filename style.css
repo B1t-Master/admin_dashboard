@@ -1,0 +1,14 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+form {
+  appearance: none;
+  outline: none;
+}
