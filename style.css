@@ -1,9 +1,8 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"); */
-
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
 * {
   padding: 0px;
   margin: 0px;
-  /* font-family: "Mukta", sans-serif; */
+  font-family: "Mukta", sans-serif;
   box-sizing: border-box;
   line-height: 1.5;
 }
@@ -11,9 +10,11 @@ a:any-link {
   color: white;
   text-decoration: none;
 }
+
 html {
   height: 100%;
 }
+
 body {
   height: 100%;
   background-color: rgb(193, 193, 193);
@@ -22,16 +23,18 @@ body {
   grid-template-rows: 1fr 3fr;
   grid-template-areas: "sidebar header " "sidebar projects";
 }
+
 form {
   appearance: none;
   outline: none;
   position: relative;
   width: 80%;
 }
+
 input[type="text"] {
   height: 32px;
   position: relative;
-  width: 100%;
+  width: 80%;
   border: none;
   border-radius: 24px;
   background-color: rgb(193, 193, 193);
@@ -39,6 +42,8 @@ input[type="text"] {
 
 .header {
   background-color: white;
+  position: sticky;
+  top: 0;
   grid-area: header;
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -60,10 +65,12 @@ input[type="text"] {
 .user-name {
   font-weight: 900;
 }
+
 .crud-buttons {
   display: flex;
   gap: 20px;
 }
+
 button {
   border: 0;
   border-radius: 24px;
@@ -75,12 +82,14 @@ button {
   height: 2.5rem;
   gap: 8px;
   font-weight: 600;
+  font-size: 18px;
 }
 
 .upper-header div:first-of-type {
   margin-left: auto;
   display: flex;
-  gap: 12px;
+  gap: 16px;
+  margin-left: 32px;
 }
 
 .sidebar {
@@ -90,8 +99,14 @@ button {
   grid-area: sidebar;
 }
 
+a:hover {
+  color: rgb(248, 218, 51);
+}
+
 .title {
   font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0.5rem 0;
 }
 
 .card {
@@ -100,34 +115,28 @@ button {
   background-color: white;
   padding: 16px;
 }
+
 .main {
   display: flex;
   gap: 32px;
-  /* margin: auto; */
   margin: 32px;
-  /* width: 80%; */
-  /* height: 100%; */
-  /* min-width: 0; */
-  /* align-items: center; */
   justify-content: center;
-  /* overflow: clip; */
-  /* flex-shrink: 1; */
 }
+
 .informatics {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
+
 .trending {
   margin-top: auto;
 }
+
 .card-body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
   gap: 32px;
-  /* align-self: center; */
-  /* max-height: fit-content; */
-  /* min-height: 0; */
 }
 
 .card {
@@ -142,8 +151,20 @@ button {
   padding: 24px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.main .title {
+
+.announcement-cards > div:nth-child(-n + 2) {
+  border-bottom: 0.2px solid rgb(179, 178, 178);
+  border-width: 80%;
+  padding-bottom: 12px;
+}
+.main .sub-title {
   margin: 0.5rem 0 1rem;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.text-content {
+  color: rgb(179, 178, 178);
 }
 
 .informatics > * {
@@ -155,8 +176,8 @@ button {
   flex-direction: column;
   padding-left: 2rem;
   padding-top: 2rem;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px inset;
 }
+
 .website-logo {
   width: 4rem;
   height: 4rem;
@@ -165,7 +186,6 @@ button {
 .sidebar-section3 img {
   width: 2rem;
   height: 2rem;
-  stroke: white;
 }
 
 .sidebar-section2 > div,
@@ -182,4 +202,37 @@ button {
 .logo-text {
   font-size: 40px;
   margin-left: -32px;
+}
+
+.user-img {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.trending-cards > div {
+  display: flex;
+  gap: 1rem;
+  margin: 8px;
+}
+
+.profile {
+  border-radius: 16px;
+  width: 6rem;
+  height: 6rem;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+div ~ .user-name {
+  font-size: 32px;
 }
