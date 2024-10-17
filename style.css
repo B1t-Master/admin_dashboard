@@ -142,6 +142,8 @@ a:hover {
 .card {
   height: 16rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .trending-cards,
@@ -235,4 +237,16 @@ a:hover {
 }
 div ~ .user-name {
   font-size: 32px;
+}
+.card-footer img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.card-footer {
+  margin-top: auto;
+  justify-self: baseline;
+  align-self: flex-end;
+  display: flex;
+  gap: 12px;
 }
